@@ -13,6 +13,3 @@ const nnn = Number(strN + strN + strN);
 const sumN = n + nn + nnn;
 
 console.log("n = 4, Сумма n + nn + nnn == ", sumN);
-
-
-
