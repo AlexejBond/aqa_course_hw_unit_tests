@@ -7,28 +7,24 @@
 const minAge = 18;
 const maxAge = 60;
 
-let age = "66";
+let age = true;
+console.log(`Initial age: ${age} (type: ${typeof age})`);
 
-console.log(`Initial age: ${age}`);
-
-if (typeof age !== 'number') {
-  const num = Number(age);
-  if (!isNaN(num)) {
-    age = num;
-    console.log("Converted to number:", age);
-  } else {
-    console.log("Incorrect data type");
-    return;
-  }
+const num = Number(age);
+if (Number.isNaN(num)) {
+  console.log("Incorrect data type");
+  return;
 }
 
+age = num;
+console.log("Converted to number:", age);
 
 if (age < minAge) {
-  console.log(`You don't have access cause your age is ${age}. It's less then ${minAge}`);
+  console.log(`You don't have access cause your age is ${age}. It's less than ${minAge}`);
 } else if (age >= minAge && age < maxAge) {
-  console.log('Welcome  !');
+  console.log("Welcome!");
 } else if (age > maxAge) {
-  console.log('Keep calm and look Culture channel');
+  console.log("Keep calm and look Culture channel");
 } else {
-  console.log('Technical work');
+  console.log("Technical work");
 }
