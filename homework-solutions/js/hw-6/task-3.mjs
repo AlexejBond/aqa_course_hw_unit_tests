@@ -6,6 +6,11 @@
 
   Присвойте результат в переменную "unique"
 */
-let unique;
 
-export { unique };
+const numbers = [1, 2, 333, 4, 5, 36, 7, 8, 95, 10, 2, 4, 6, 8, 10, 1, 3, 5, 7, 9, 1143, 23, 43, ];
+
+let unique = [...new Set(numbers)];
+
+console.log(unique); 
+
+// export { unique };
