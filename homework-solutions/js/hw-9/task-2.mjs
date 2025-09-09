@@ -14,23 +14,60 @@ const characters = [
 ];
 
 function addCharacter(character) {
-  // Ваш код
+  if (Object.keys(character).length <= 1) {
+    throw new Error("give me a correct arguments");
+  } else {
+    characters.push({
+    name: character.name,
+    age: character.age
+  })
+  }
 }
 
 function getCharacter(name) {
-  // Ваш код
+  if (name.length === 0) {
+    throw new Error("give me a coorect arguments");
+  } else {
+      return characters.find((elem) => {
+    return elem.name === name
+  })
+  }
 }
 
 function getCharactersByAge(minAge) {
-  // Ваш код
-}
+  if (typeof minAge != 'number') {
+    throw new Error("give me a correct arguments");
+  } else {
+       return characters.filter((elem) => {
+    return elem.age >= minAge
+  })
+}}
 
 function updateCharacter(name, newCharacter) {
-  // Ваш код
+    if (Object.keys(newCharacter).length <= 1) {
+    throw new Error("give me a correct arguments");
+  } else {
+      
+  let obj = getCharacter(name)
+  obj.name = newCharacter.name;
+  obj.age = newCharacter.age;
+  return characters; 
+  }
 }
+
+//Напишите функцию для удаления персонажа removeCharacter(name) 
+// (Реализовать через splice, индекс персонажа искать методом findInxex)
 
 function removeCharacter(name) {
-  // Ваш код
+
+  let ind = characters.findIndex(elem => elem.name === name);
+
+  if (ind === -1) {
+    throw new Error("give me a correct arguments");
+  } else {
+  characters.splice(ind, 1)
+ }
+  return characters
 }
 
-export { characters, addCharacter, updateCharacter, getCharacter, getCharactersByAge, removeCharacter };
+// export { characters, addCharacter, updateCharacter, getCharacter, getCharactersByAge, removeCharacter };
