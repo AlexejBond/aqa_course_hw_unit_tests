@@ -8,12 +8,41 @@
   Воспользуйтесь наборами пицц, что приведены ниже.
 
   Пиццы:
-  const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai']
-  const myPizzasT1 = ['Peperoni', 'Margherita', 'Diablo', 'Vegetarian'];
-  const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+  
 */
+
+const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai']
+const myPizzasT1 = ['Peperoni', 'Margherita', 'Diablo', 'Vegetarian'];
+const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
 
 let resultUnique;
 let resultNull;
 
-export { resultNull, resultUnique };
+const competitorSetLowCase = competitorPizzas.map(pizza => pizza.toLowerCase());
+
+function checkPizzas(myPizzas) {
+  const resultUnique = [];
+
+  for (const pizza of myPizzas) {
+    const lowerPizza = pizza.toLowerCase();
+
+    if (!competitorSetLowCase.includes(lowerPizza)) {
+      resultUnique.push(pizza);
+    }
+  }
+
+  if (resultUnique.length === 0) {
+    return null;
+  }
+
+  return resultUnique;
+}
+
+const resultT1 = checkPizzas(myPizzasT1); 
+const resultT2 = checkPizzas(myPizzasT2); 
+
+console.log('myPizzasT1:', resultT1); // ['Margherita', 'Vegetarian']
+console.log('myPizzasT2:', resultT2); // null
+
+
+// export { resultNull, resultUnique };
