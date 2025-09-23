@@ -31,7 +31,7 @@ function devideBy(sentence) {
   const words = sentence.trim().split(/\s+/);
   if (words.length === 0 || (words.length === 1 && words[0] === '')) return '';
 
-  const transformed = words.map((w, i) => {
+  const transformed = words.map((w, i) => { 
     const lower = w.toLowerCase();
     if (i === 0) {
       return lower;
@@ -73,4 +73,5 @@ function fibonacci(n) {
 console.log(fibonacci(8)); // 21
 
 
-// export { mergeArrays, fibonacci, devideBy };
+ export { mergeArrays, fibonacci, devideBy };
+

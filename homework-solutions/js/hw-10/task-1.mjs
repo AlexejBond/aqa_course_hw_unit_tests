@@ -59,4 +59,4 @@ function createCounter() {
 
 const functionCallCounter = createCounter();
 
-// export { qa, bindResult, callResult, applyResult, functionCallCounter, anotherQa };
+export { qa, bindResult, callResult, applyResult, functionCallCounter, anotherQa };
