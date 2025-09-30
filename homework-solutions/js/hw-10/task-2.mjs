@@ -18,4 +18,4 @@ function countOccurrences(arr = []) {
 
 console.log(countOccurrences(numbers));
 
-// export { countOccurrences };
+ export { countOccurrences };

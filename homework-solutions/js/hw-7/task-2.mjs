@@ -50,6 +50,6 @@ function findLongestWords(sentence) {
 let sentence = 'слова разделенные только с помощью пробелами';
 findLongestWords(sentence);
 
-// export { isPalindrom, findLongestWords };
+ export { isPalindrom, findLongestWords };
 
 

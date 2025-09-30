@@ -70,4 +70,4 @@ function removeCharacter(name) {
   return characters
 }
 
-// export { characters, addCharacter, updateCharacter, getCharacter, getCharactersByAge, removeCharacter };
+ export { characters, addCharacter, updateCharacter, getCharacter, getCharactersByAge, removeCharacter };
