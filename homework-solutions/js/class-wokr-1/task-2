@@ -1,0 +1,26 @@
+const numbers = [5, -2, 8, -7, 3, 0, 12, -4, 9, 6, -5, 11];
+
+
+function getPosAndNegArrays(arr) {
+  return arr.reduce(
+    (result, num) => {
+      const [positives, negatives] = result;
+      if (num > 0) positives.push(num);
+      else if (num < 0) negatives.push(num);
+      return result;
+    },
+    [[], []] 
+  );
+}
+
+function sumPosAndNeg(arr) {
+  const [positives, negatives] = getPosAndNegArrays(arr);
+  const sumPos = positives.reduce((sum, n) => sum + n, 0);
+  const sumNeg = negatives.reduce((sum, n) => sum + n, 0);
+  return [sumPos, sumNeg];
+}
+
+
+console.log(getPosAndNegArrays(numbers));
+
+console.log(sumPosAndNeg(numbers));
