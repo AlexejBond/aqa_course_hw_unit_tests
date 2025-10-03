@@ -18,8 +18,8 @@ function getLastElement <T> (array: T[]) {
 }
 
 console.log(getLastElement([1, 2, 3, 4]));
-console.log(getLastElement(['first', 'second', 'third', 'last']));
-console.log(getLastElement([true, false, false, true]));
+console.log(getLastElement(['first', 'second', 'third', 'C - last']));
+console.log(getLastElement([true, false, true, false]));
 
 // 3. Создайте дженерик интерфейс IPair, который принимает два типа T и U и содержит поля first: T и second: U.
 // Реализуйте функцию, принимающую IPair и возвращающую строку, описывающую пару.
