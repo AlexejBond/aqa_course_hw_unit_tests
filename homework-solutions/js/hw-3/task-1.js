@@ -59,5 +59,3 @@ let item_7 = String(item_6);
 let item_7_type = typeof item_7; 
 
 console.log("item_7 ==", item_7, "; item_7_type ==", item_7_type);
-
-
